@@ -5,6 +5,7 @@ Rspec.describe Example do
   end
   
   it "has a time available to convert" do
+    graduationTime = Student.getGraduationTime
     expect(graduationTime).to exist
     expect(graduationTime).to be > 0
   end
