@@ -1,24 +1,19 @@
-# README
+# The Amazing Graduation Timer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an application that is meant to show the amount of time left until
+graduation in obscure measurements, such as hot dogs eaten or games bought on
+steam.
 
-Things you may want to cover:
+How to get the application running:
+1. Follow the steps to install ruby here: https://www.ruby-lang.org/en/documentation/installation/ 
+2. Install rails using the command "gem install rails"
+3. Download the zip using the github "Clone or download" button and then extract it
+4. Navigate to the root of extracted file
+5. Install dependencies using the command "bundle install"
+6. Use the command "rails server"
+7. You're done!
 
-* Ruby version
+In order to run the test suite, simply go to the graduation_countdown directory
+in command line with RUBY or something similar, and run the command rspec.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ted George, Rasheed El Kassed
