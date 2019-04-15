@@ -18,3 +18,4 @@ module GraduationCountdown
   end
 end
 
+ENV['TMP'] = 'C:/Windows/Temp'
