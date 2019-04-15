@@ -17,5 +17,3 @@ module GraduationCountdown
     # the framework and any gems in your application.
   end
 end
-
-ENV['TMP'] = 'C:/Windows/Temp'
