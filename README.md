@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an application that is meant to show the amount of time left until
+graduation in obscure measurements, such as hot dogs eaten or games bought on
+steam.
 
-Things you may want to cover:
+// Instructions for getting the app running
 
-* Ruby version
+In order to run the test suite, simply go to the graduation_countdown directory
+in command line with RUBY or something similar, and run the command rspec.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ted George, Rasheed El Kassed
