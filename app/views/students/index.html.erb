@@ -1,0 +1,19 @@
+<h1> All Students </h1>
+<table>
+	<thead>
+		<tr>
+			<td>Credits</td>
+			<td>Declared Major</td>
+			<td>Days until graduation</td>
+		</tr>
+	</thead>
+	<tbody>
+		<% @student.each do |students| %>
+		<tr>
+			<td><%= students.credits %></td>
+			<td><%= students.declared_major %></td>
+			<td><%= students.days_until_graduation %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
