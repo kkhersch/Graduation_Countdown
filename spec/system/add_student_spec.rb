@@ -7,4 +7,11 @@ RSpec.describe "adding a student", type: :system do
     visit students_path
     expect(page).to have_content("Computer Science")
   end
+  
+  it "Has a default value if student is created with no declared major" do
+    visit new_student_path
+    click_on("Create Student")
+    visit students_path
+    expect(page).to have_content("No defined major")
+  end
 end
