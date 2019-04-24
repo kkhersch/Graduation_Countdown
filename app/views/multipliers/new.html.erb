@@ -1,0 +1,11 @@
+<h1>New Multiplier<h1>
+
+<%= form_for(@multiplier) do |f| %>
+   <%= f.label(:name) %>
+   <%= f.text_field(:name) %>
+   <br />
+   <%= f.label(:multiplier_value) %>
+   <%= f.text_field(:multiplier_value)
+   <br />
+   <%= f.submit %>
+<% end %>

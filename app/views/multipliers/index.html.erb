@@ -1,0 +1,17 @@
+<h1>All Multipliers</h1>
+<table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Value</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @multipliers.each do |multiplier| %>
+      <tr class="multiplier-row" id="<%= dom_id(multiplier) %>">
+        <td class="name"><%= multiplier.name %></td>
+        <td class = "multiplier_value"><%= multiplier.multiplier_value %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
