@@ -18,5 +18,6 @@ class MultipliersController < ApplicationController
     else
       @multiplier = @workflow.multiplier
       render :new
+    end
   end
 end

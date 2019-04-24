@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_23_193459) do
+ActiveRecord::Schema.define(version: 2019_04_24_191154) do
+
+  create_table "multipliers", force: :cascade do |t|
+    t.string "name"
+    t.integer "multiplier_value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "students", force: :cascade do |t|
     t.integer "days_until_graduation"
