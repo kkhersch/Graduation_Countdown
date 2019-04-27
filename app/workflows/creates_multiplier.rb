@@ -1,8 +1,9 @@
 class CreatesMultiplier
-  attr_accessor :name, :multiplier_value
+  attr_accessor :name, :multiplier_value, :multiplier
 
   def initialize(name: "", multiplier_value: 0)
     @name = name
+    @multiplier_value = multiplier_value
     @success = false
   end
 
