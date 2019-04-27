@@ -8,15 +8,15 @@ RSpec.describe CreatesMultiplier do
   end
 
   it "creates a multiplier given a multiplier value" do
-    creator = CreatesMultiplier.new(multiplier_value: 0.0192)
+    creator = CreatesMultiplier.new(multiplier_value: 2)
     creator.build
-    expect(creator.multiplier.multiplier_value).to eq(0.0192)
+    expect(creator.multiplier.multiplier_value).to eq(2)
   end
 
   it "creates a multiplier given a name and a multiplier vale" do
-    creator = CreatesMultiplier.new(name: "Games Released on Steam", multiplier_value: 0.192)
+    creator = CreatesMultiplier.new(name: "Games Released on Steam", multiplier_value: 4)
     creator.build
-    expect(creator.multiplier.multiplier_value).to eq(0.0192)
+    expect(creator.multiplier.multiplier_value).to eq(4)
     expect(creator.multiplier.name).to eq("Games Released on Steam")
   end
 
