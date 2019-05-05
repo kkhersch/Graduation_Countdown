@@ -8,7 +8,7 @@ class Multiplier < ApplicationRecord
   end
 
   def retrieve(major)
-    if major = "Computer Science"
+    if major == "Computer Science"
       multiplier = Multiplier.create(name: "Games Released on Steam", multiplier_value: 21)
     end
     multiplier
