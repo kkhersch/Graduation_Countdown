@@ -9,9 +9,9 @@ class Multiplier < ApplicationRecord
 
   def retrieve(major)
     if major == "Computer Science"
-      multiplier = Multiplier.create(name: "Games Released on Steam", multiplier_value: 21)
+      self.name = "Games Released on Steam"
+      self.multiplier_value = 21
     end
-    multiplier
   end
 
   validates :name, presence: true
