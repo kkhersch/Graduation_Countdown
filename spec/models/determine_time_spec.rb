@@ -1,18 +1,26 @@
 require "rails_helper"
 
 RSpec.describe "determine time", type: :model do
+  FactoryBot.define do
+    factory :fake_student do
+      credits {72}
+    end
+    
+    factory :fake_multipler do
+    
+    end
+  end
+ 
   it "Has a class standing" do
-    fake_student = Student.create
+    fake_student = FactoryBot.create(:fake_student)
     expect(fake_student.class_standing).to eq("Freshman")
   end
 
   it "Has a class standing based on credits" do
-    fake_student = Student.create(credits: 72)
     expect(fake_student.class_standing).to eq("Sophmore")
   end
 
   it "Can determine time based on class standings" do
-    fake_student = Student.create(credits: 72)
     expect(fake_student.class_standing).to eq("Sophmore")
     expect(fake_student.caluclate_time_until_graduation).to eq(1095)
   end
