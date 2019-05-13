@@ -3,11 +3,11 @@ require "rails_helper"
 RSpec.describe "adding a multiplier", type: :system do
   it "allows a user to create a multiplie with value" do
     visit new_multiplier_path
-    fill_in "Name", with: "Hot Dogs"
+    fill_in "Name", with: "Hot Dogs Eaten"
     fill_in "Multiplier value", with: 7.2
     click_on("Create Multiplier")
     visit multipliers_path
-    expect(page).to have_content("Hot Dogs")
+    expect(page).to have_content("Hot Dogs Eaten")
     expect(page).to have_content(7.2)
     #@multiplier = Multiplier.find_by(name: "Hot Dogs")
     #expect(page).to have_selector(
