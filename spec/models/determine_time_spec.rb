@@ -30,6 +30,7 @@ RSpec.describe "Calculates final output" do
   let(:fake_multiplier) {FactoryBot.build_stubbed(:multiplier, :steam)}
   let(:fake_multiplier_float) {FactoryBot.build_stubbed(:multiplier, :rupie)}
   let(:fake_multiplier_default) {FactoryBot.build_stubbed(:multiplier, :default)}
+
   it "Has a major" do
     fake_student = Student.create(declared_major: "Computer Science")
     expect(fake_student.declared_major).to eq("Computer Science")
