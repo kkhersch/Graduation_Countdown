@@ -39,14 +39,11 @@ RSpec.describe "Calculates final output" do
   end
 
   it "Has a multiplier value that is not an integer" do
-    #fake_multiplier_float = Multiplier.create(name: "Rupies Gathered", multiplier_value: 5.7)
-    #expect(fake_multiplier.multiplier_value).to eq(Float)
     expect(fake_multiplier_float.multiplier_value).to eq(5.7)
   end
 
   it "Can select a multiplier based off of major" do
     fake_student = Student.create(declared_major: "Computer Science")
-    #fake_multiplier_default = Multiplier.create()
     fake_multiplier_default.retrieve(fake_student.declared_major)
     expect(fake_multiplier_default.name).to eq("Games Released on Steam")
     expect(fake_multiplier_default.multiplier_value).to eq(21)
@@ -54,7 +51,6 @@ RSpec.describe "Calculates final output" do
 
   it "Can calculate time till graduation * multiplier" do
     fake_student = Student.create(declared_major: "Computer Science", credits: 72)
-    #fake_multiplier_default = Multiplier.create()
     fake_multiplier_default.retrieve(fake_student.declared_major)
     time_value = fake_student.caluclate_time_until_graduation
     result = fake_multiplier_default.multiplier_value * time_value
