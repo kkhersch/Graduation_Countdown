@@ -1,39 +1,28 @@
 require "rails_helper"
 
 RSpec.describe "determine time", type: :model do
-  FactoryBot.define do
-    factory :fake_student do
-      credits {72}
-    end
-    
-    factory :fake_multipler do
-    
-    end
-  end
- 
+  let (:freshman_student) {FactoryBot.create(:student, :freshman)}
+  let (:sophmore_student) {FactoryBot.create(:student, :sophmore)}
+  let (:junior_student) {FactoryBot.create(:student, :junior)}
+  let (:senior_student) {FactoryBot.create(:student, :senior)}
+  
   it "Has a class standing" do
-    fake_student = FactoryBot.create(:fake_student)
-    expect(fake_student.class_standing).to eq("Freshman")
+    expect(freshman_student.class_standing).to eq("Freshman")
   end
 
   it "Has a class standing based on credits" do
-    expect(fake_student.class_standing).to eq("Sophmore")
+    expect(sophmore_student.class_standing).to eq("Sophmore")
   end
 
   it "Can determine time based on class standings" do
-    expect(fake_student.class_standing).to eq("Sophmore")
-    expect(fake_student.caluclate_time_until_graduation).to eq(1095)
+    expect(sophmore_student.caluclate_time_until_graduation).to eq(1095)
   end
 
   it "Has a time value for every class standing" do
-    fake_student = Student.create
-    expect(fake_student.caluclate_time_until_graduation).to eq(1460)
-    fake_student.credits = 55
-    expect(fake_student.caluclate_time_until_graduation).to eq(1095)
-    fake_student.credits = 105
-    expect(fake_student.caluclate_time_until_graduation).to eq(730)
-    fake_student.credits = 140
-    expect(fake_student.caluclate_time_until_graduation).to eq(365)
+    expect(freshman_student.caluclate_time_until_graduation).to eq(1460)
+    expect(sophmore_student.caluclate_time_until_graduation).to eq(1095)
+    expect(junior_student.caluclate_time_until_graduation).to eq(730)
+    expect(senior_student.caluclate_time_until_graduation).to eq(365)
   end
 end
 
