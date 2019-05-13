@@ -1,5 +1,4 @@
 require "rails_helper"
-require "multiplier.rb"
 
 RSpec.describe "determine time", type: :model do
   it "Has a class standing" do
@@ -33,7 +32,7 @@ end
 RSpec.describe "Calculates final output" do
   let(:fake_multiplier) {FactoryBot.build_stubbed(:multiplier, :steam)}
   let(:fake_multiplier_float) {FactoryBot.build_stubbed(:multiplier, :rupie)}
-  let(:fake_multiplier_default) {FactoryBot.build_stubbed(:multiplier. :default)}
+  let(:fake_multiplier_default) {FactoryBot.build_stubbed(:multiplier, :default)}
   it "Has a major" do
     fake_student = Student.create(declared_major: "Computer Science")
     expect(fake_student.declared_major).to eq("Computer Science")
@@ -42,7 +41,7 @@ RSpec.describe "Calculates final output" do
   it "Has a multiplier value that is not an integer" do
     #fake_multiplier_float = Multiplier.create(name: "Rupies Gathered", multiplier_value: 5.7)
     #expect(fake_multiplier.multiplier_value).to eq(Float)
-    expect(fake_multiplier_float).multiplier_value).to eq(5.7)
+    expect(fake_multiplier_float.multiplier_value).to eq(5.7)
   end
 
   it "Can select a multiplier based off of major" do
