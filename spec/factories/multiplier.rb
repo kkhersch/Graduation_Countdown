@@ -25,3 +25,5 @@ FactoryBot.define do
       name {"No Defined Name"}
       multiplier_value {0}
     end
+  end
+end
