@@ -31,4 +31,9 @@ class Student < ApplicationRecord
       self.days_until_graduation = 365
     end
   end
+  
+  def long_method(big_dependency)
+    big_dependency.execute
+    return 7
+  end
 end
