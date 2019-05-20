@@ -1,4 +1,5 @@
 require "rails_helper"
+require "big_dependency"
 
 RSpec.describe "test the large method" do
   let (:fake_multiplier) {FactoryBot.build_stubbed(:multiplier, :steam)}
