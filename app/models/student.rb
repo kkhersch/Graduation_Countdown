@@ -32,8 +32,4 @@ class Student < ApplicationRecord
     end
   end
   
-  def long_method(big_dependency)
-    big_dependency.execute
-    return 7
-  end
 end

@@ -1,5 +1,5 @@
 class Multiplier < ApplicationRecord
-
+  validates :name, presence: true
   after_initialize :default_values
 
   def default_values
@@ -14,10 +14,5 @@ class Multiplier < ApplicationRecord
     end
   end
 
-  def long_method(big_dependency)
-    big_dependency.execute
-    return 7
-  end
-
-  validates :name, presence: true
+  
 end
