@@ -1,5 +1,6 @@
 class Student < ApplicationRecord
 
+  
   def class_standing
     if(credits < 50)
       "Freshman"
