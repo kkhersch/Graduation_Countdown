@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe "determine time", type: :model do
   let (:freshman_student) {FactoryBot.create(:student, :freshman)}
-  let (:sophmore_student) {FactoryBot.create(:student, :sophmore)}
+  let (:sophomore_student) {FactoryBot.create(:student, :sophomore)}
   let (:junior_student) {FactoryBot.create(:student, :junior)}
   let (:senior_student) {FactoryBot.create(:student, :senior)}
   
@@ -11,16 +11,16 @@ RSpec.describe "determine time", type: :model do
   end
 
   it "Has a class standing based on credits" do
-    expect(sophmore_student.class_standing).to eq("Sophmore")
+    expect(sophomore_student.class_standing).to eq("Sophomore")
   end
 
   it "Can determine time based on class standings" do
-    expect(sophmore_student.caluclate_time_until_graduation).to eq(1095)
+    expect(sophomore_student.caluclate_time_until_graduation).to eq(1095)
   end
 
   it "Has a time value for every class standing" do
     expect(freshman_student.caluclate_time_until_graduation).to eq(1460)
-    expect(sophmore_student.caluclate_time_until_graduation).to eq(1095)
+    expect(sophomore_student.caluclate_time_until_graduation).to eq(1095)
     expect(junior_student.caluclate_time_until_graduation).to eq(730)
     expect(senior_student.caluclate_time_until_graduation).to eq(365)
   end
