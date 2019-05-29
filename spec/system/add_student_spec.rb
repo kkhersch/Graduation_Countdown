@@ -12,6 +12,6 @@ RSpec.describe "adding a student", type: :system do
     visit new_student_path
     click_on("Create Student")
     visit students_path
-    expect(page).to have_content("No defined major")
+    expect(page).to have_content("Undeclared")
   end
 end
