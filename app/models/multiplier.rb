@@ -13,6 +13,5 @@ class Multiplier < ApplicationRecord
       self.multiplier_value = 21
     end
   end
-
   
 end
