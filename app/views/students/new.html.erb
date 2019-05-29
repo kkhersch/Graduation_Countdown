@@ -2,7 +2,12 @@ New Student
 <%= form_for(@student) do |f| %> 
 	<%= f.label :declared_major %> 
 	<%= f.text_field :declared_major %>
+	<br/>
+	<%= f.label :credits %>
 	<%= f.text_field :credits %>
+	<br/>
+	<%= f.label :days_until_graduation %>
+	<%= f.text_field :days_until_graduation %>
 	<br/>
 	<%= f.submit "Create Student" %> 
 <% end %> 
