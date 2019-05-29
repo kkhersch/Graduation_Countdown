@@ -15,7 +15,7 @@ describe "Student" do
 
   it "handles a lack of a major gracefully" do
     fake_student = Student.create()
-    expect(fake_student.declared_major).to be == "No defined major"
+    expect(fake_student.declared_major).to be == "Undeclared"
   end
 
   it "has a class standing based on credits" do
