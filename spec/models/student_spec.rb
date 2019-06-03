@@ -8,10 +8,7 @@ describe "Student" do
     expect(fake_student.days_until_graduation).to be == 400
   end
 
-  it "has a declared major" do
-    fake_student = Student.create(declared_major: "Computer Science")
-    expect(fake_student.declared_major).to be == "Computer Science"
-  end
+  
 
   it "handles a lack of a major gracefully" do
       expect(fake_student.declared_major).to be == "No defined major"
@@ -27,6 +24,10 @@ describe "Student" do
     let(:fake_student) {FactoryBot.create(:student, :sophomore)}
     it "has a declared major" do
       expect(fake_student.declared_major).to be == "Computer Science"
+    end
+    
+    it "has a declared major" do
+    expect(fake_student.declared_major).to be == "Computer Science"
     end
   end
 

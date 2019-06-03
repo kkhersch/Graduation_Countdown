@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_29_174729) do
+ActiveRecord::Schema.define(version: 2019_06_03_184235) do
 
   create_table "multipliers", force: :cascade do |t|
     t.string "name", default: "Name not set", null: false
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2019_05_29_174729) do
     t.integer "credits", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name", null: false
   end
 
 end
