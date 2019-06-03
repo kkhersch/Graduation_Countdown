@@ -7,5 +7,9 @@ class Multiplier < ApplicationRecord
       self.multiplier_value = 21
     end
   end
+
+  def multiplier_for_major
+  	self.multiplier_value
+  end
   
 end
