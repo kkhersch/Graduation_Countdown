@@ -8,12 +8,12 @@ class Multiplier < ApplicationRecord
     end
   end
 
-  def multiplier_for_major
-  	self.multiplier_value
-  end
+  # def multiplier_for_major
+  # 	self.multiplier_value
+  # end
 
-  def multiplier_name
-  	self.name
-  end
+  # def multiplier_name
+  # 	self.name
+  # end
   
 end
