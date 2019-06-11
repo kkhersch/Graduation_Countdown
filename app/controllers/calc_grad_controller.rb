@@ -1,6 +1,6 @@
 class CalcGradController < ApplicationController
   def index
-    @multiplier = Multiplier.all
-    @student = Student.all
+    @multipliers = Multiplier.all
+    @students = Student.all
   end
 end

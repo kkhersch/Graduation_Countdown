@@ -3,17 +3,46 @@
   <thead>
     <tr>
       <td>Student</td>
-      <td>Multiplier</td>
-      <td>Days until graduation</td>
+      <td>Credits</td>
+      <td>Major</td>
+      
     </tr>
   </thead>
   <tbody>
-    <% @student.each do |students| %>
+    <% @students.each do |student| %>
     <tr>
-      <td><%= students.name %></td>
-      <td><%= students.declared_major %></td>
-      <td><%= students.days_until_graduation %></td>
+      <td><%= student.name %></td>
+      <td><%= student.credits %></td>
+      <td><%= student.declared_major %></td>
+      <!-- <td><%= student.days_until_graduation %></td> -->
     </tr>
     <% end %>
   </tbody>
 </table>
+
+</br>
+</br>
+
+<table>
+  <thead>
+    <tr>
+      <td>Multiplier</td>
+      <td>Mult Value</td>     
+    </tr>
+  </thead>
+    <tbody>
+    <% @multipliers.each do |multiplier| %>
+    <tr>
+      <td><%= multiplier.name %></td>
+      <td><%= multiplier.multiplier_value %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</br>
+</br>
+
+<div>
+   <td>Days until graduation</td>
+</div>
