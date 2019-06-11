@@ -43,7 +43,7 @@ RSpec.describe "Calculates final output" do
 
   it "Can select a multiplier based off of major" do
     fake_multiplier_default.retrieve(sophomore_student.declared_major)
-    expect(fake_multiplier_default.name).to eq("Games Released on Steam")
+    expect(fake_multiplier_default.multiplier_name).to eq("Games Released on Steam")
     expect(fake_multiplier_default.multiplier_value).to eq(21)
   end
 

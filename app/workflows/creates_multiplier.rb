@@ -1,8 +1,8 @@
 class CreatesMultiplier
-  attr_accessor :name, :multiplier_value, :multiplier
+  attr_accessor :multiplier_name, :multiplier_value, :multiplier
 
-  def initialize(name: "", multiplier_value: 0)
-    @name = name
+  def initialize(multiplier_name: "", multiplier_value: 0)
+    @multiplier_name = multiplier_name
     @multiplier_value = multiplier_value
   end
   
@@ -11,7 +11,7 @@ class CreatesMultiplier
   end
 
   def build
-    self.multiplier = Multiplier.new(name: name, multiplier_value: multiplier_value)
+    self.multiplier = Multiplier.new(multiplier_name: multiplier_name, multiplier_value: multiplier_value)
   end
 
   def create

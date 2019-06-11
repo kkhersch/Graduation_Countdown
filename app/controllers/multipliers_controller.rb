@@ -9,7 +9,7 @@ class MultipliersController < ApplicationController
   
   def create
     @workflow = CreatesMultiplier.new(
-    name: params[:multiplier][:name],
+    name: params[:multiplier][:multiplier_name],
     multiplier_value: params[:multiplier][:multiplier_value])
     @workflow.create
     redirect_to multipliers_path

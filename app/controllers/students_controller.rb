@@ -9,6 +9,7 @@ class StudentsController < ApplicationController
   
   def create
     @workflow = CreatesStudent.new(
+    student_name: params[:student][:student_name],
     days_until_graduation: params[:student][:days_until_graduation],
     credits: params[:student][:credits],
     declared_major: params[:student][:declared_major])

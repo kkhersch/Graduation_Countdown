@@ -10,6 +10,7 @@
 	<tbody>
 		<% @student.each do |students| %>
 		<tr>
+			<td><%= students.student_name %></td>
 			<td><%= students.credits %></td>
 			<td><%= students.declared_major %></td>
 			<td><%= students.caluclate_time_until_graduation %></td>
