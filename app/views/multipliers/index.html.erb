@@ -9,7 +9,7 @@
   <tbody>
     <% @multiplier.each do |multiplier| %>
       <tr class="multiplier-row" id="<%= dom_id(multiplier) %>">
-        <td class="name"><%= multiplier.multiplier_name %></td>
+        <td class="multiplier_name"><%= multiplier.multiplier_name %></td>
         <td class = "multiplier_value"><%= multiplier.multiplier_value %></td>
       </tr>
     <% end %>

@@ -1,9 +1,9 @@
 require "rails_helper"
 
 RSpec.describe "adding a multiplier", type: :system do
-  it "allows a user to create a multiplie with value" do
+  it "allows a user to create a multiplier with value" do
     visit new_multiplier_path
-    fill_in "Name", with: "Hot Dogs Eaten"
+    fill_in "Multiplier name", with: "Hot Dogs Eaten"
     fill_in "Multiplier value", with: 7.2
     click_on("Create Multiplier")
     visit multipliers_path
@@ -18,7 +18,7 @@ RSpec.describe "adding a multiplier", type: :system do
 
   it "doesn't allow a user to create a multiplier without a name" do
     visit new_multiplier_path
-    fill_in "Name", with: ""
+    fill_in "Multiplier name", with: ""
     fill_in "Multiplier value", with: 12
     click_on("Create Multiplier")
     expect(page).to_not have_content(12)

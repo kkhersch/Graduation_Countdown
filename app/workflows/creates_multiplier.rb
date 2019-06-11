@@ -11,7 +11,8 @@ class CreatesMultiplier
   end
 
   def build
-    self.multiplier = Multiplier.new(multiplier_name: multiplier_name, multiplier_value: multiplier_value)
+    self.multiplier = Multiplier.new( multiplier_name: multiplier_name, 
+                                      multiplier_value: multiplier_value)
   end
 
   def create
