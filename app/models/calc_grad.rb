@@ -1,0 +1,2 @@
+class CalcGrad < ApplicationRecord
+end

@@ -1,5 +1,8 @@
-New Student
+<h1>New Student</h1>
 <%= form_for(@student) do |f| %> 
+  <%= f.label :student_name %> 
+  <%= f.text_field :student_name %>
+  <br/>
 	<%= f.label :declared_major %> 
 	<%= f.text_field :declared_major %>
 	<br/>

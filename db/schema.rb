@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_03_184235) do
+ActiveRecord::Schema.define(version: 2019_06_11_030938) do
+
+  create_table "calc_grads", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "multipliers", force: :cascade do |t|
     t.string "name", default: "Name not set", null: false
@@ -25,7 +30,7 @@ ActiveRecord::Schema.define(version: 2019_06_03_184235) do
     t.integer "credits", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name", null: false
+    t.string "student_name", null: false
   end
 
 end

@@ -1,4 +1,6 @@
 <h1> Calculating Graduation Times </h1>
+
+<%= link_to 'Manage Students', students_path %>
 <table>
   <thead>
     <tr>
@@ -11,7 +13,7 @@
   <tbody>
     <% @students.each do |student| %>
     <tr>
-      <td><%= student.name %></td>
+      <td><%= student.student_name %></td>
       <td><%= student.credits %></td>
       <td><%= student.declared_major %></td>
       <!-- <td><%= student.days_until_graduation %></td> -->
@@ -23,6 +25,7 @@
 </br>
 </br>
 
+<%= link_to 'Manage Multipliers', multipliers_path %>
 <table>
   <thead>
     <tr>
@@ -33,7 +36,7 @@
     <tbody>
     <% @multipliers.each do |multiplier| %>
     <tr>
-      <td><%= multiplier.name %></td>
+      <td><%= multiplier.multiplier_name %></td>
       <td><%= multiplier.multiplier_value %></td>
     </tr>
     <% end %>
@@ -45,4 +48,8 @@
 
 <div>
    <td>Days until graduation</td>
+   <div>
+     <%= select_tag "Student Name", options_for_select(@students.collect { |student| student.student_name }), include_blank: "Select Student Name" %>
+     <%= select_tag "Multiplier", options_for_select(@multipliers.collect { |multiplier| multiplier.multiplier_value }), include_blank: "Select Multiplier" %>
+   </div>
 </div>
