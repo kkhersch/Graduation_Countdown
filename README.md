@@ -17,3 +17,22 @@ In order to run the test suite, simply go to the graduation_countdown directory
 in command line with RUBY or something similar, and run the command rspec.
 
 Ted George, Rasheed El Kassed
+
+
+---
+Notes from Kenney & Flori
+
+Additional routes have been created to ```./calc_grads```
+
+Which displays all students and multipliers.
+Features on the page include:
+>route to manage students
+>route to manage multipliers
+>selection for students and multipliers
+
+Features that were pending include
+>calcuation of graduation time based on selected options
+
+Obstacles included
+* Conflicts with capybara not recognizing a found selection option
+
