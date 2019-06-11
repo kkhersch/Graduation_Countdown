@@ -1,0 +1,19 @@
+<h1> Calculating Graduation Times </h1>
+<table>
+  <thead>
+    <tr>
+      <td>Student</td>
+      <td>Multiplier</td>
+      <td>Days until graduation</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @student.each do |students| %>
+    <tr>
+      <td><%= students.name %></td>
+      <td><%= students.declared_major %></td>
+      <td><%= students.days_until_graduation %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
