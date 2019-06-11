@@ -26,13 +26,55 @@ Additional routes have been created to ```./calc_grads```
 
 Which displays all students and multipliers.
 Features on the page include:
->route to manage students
->route to manage multipliers
->selection for students and multipliers
+* route to manage students
+* route to manage multipliers
+* selection for students and multipliers
 
 Features that were pending include
->calcuation of graduation time based on selected options
+* calcuation of graduation time based on selected options
 
 Obstacles included
 * Conflicts with capybara not recognizing a found selection option
 
+---
+
+## Additional Installation steps
+
+### Guard
+* add guard to the project 
+in __Gemfile__
+```ruby
+group :development do
+  ...
+  gem 'guard-rspec', require: false
+  ...
+end
+```
+
+run the command `bundle exec guard init rspec`
+
+### Simplcov
+>Simplecov is a st coverage visualizer to get a gauge on how much of a code base are under tests
+
+anywhere in your __Gemfile__
+```gem 'simplecov', require: false, group: :test```
+
+at the top of __test/test_helper.rb__
+```ruby
+require 'simplecov'
+SimpleCov.start
+
+# Everything else after
+```
+
+in __bin/rails__ under `#!/usr/bin/env ruby.exe`
+```
+if ENV['RAILS_ENV'] == 'test'
+  require 'simplecov'
+    SimpleCov.start 'rails'
+    puts "required simplecov"
+end
+```
+
+add to __.gitignore__ to not be tracked by git
+`echo "coverage" >> .gitignore`
