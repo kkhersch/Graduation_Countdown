@@ -48,8 +48,9 @@
 
 <div>
    <td>Days until graduation</td>
-   <div>
-     <%= select_tag "Student Name", options_for_select(@students.collect { |student| student.student_name }), include_blank: "Select Student Name" %>
-     <%= select_tag "Multiplier", options_for_select(@multipliers.collect { |multiplier| multiplier.multiplier_value }), include_blank: "Select Multiplier" %>
+   <div id="calc_grad_form">
+     <%= select_tag 'student_name', 
+      options_from_collection_for_select(@students, "student_name", "student_name"), include_blank: "Select Student Name" %>
+     <%= select_tag 'multiplier', options_for_select(@multipliers.collect { |multiplier| multiplier.multiplier_value }), include_blank: "Select Multiplier" %>
    </div>
 </div>
